@@ -1,0 +1,76 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace clasessimples
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            car myCar = new car();
+            myCar.Make = "oldsmobile";
+            myCar.Model = "Cutlas Supreme";
+            myCar.year = "1986";
+            myCar.color = "Silver";
+
+            Console.WriteLine("{0} {1} {2} {3}",
+                myCar.Make ,
+                myCar.Model ,
+                myCar.year ,
+                myCar.color ,
+                myCar.color );
+
+            // decimal value = DetermineMarketValue(myCar);
+            //  Console.WriteLine("{0:C}", value );
+
+            Console.WriteLine("{0:C}", myCar.DetermineMarketValue());       
+
+            Console.ReadLine(); 
+
+
+
+        }
+
+        private static decimal DetermineMarketValue(car car)
+        {
+            decimal carValue = 100.0M;
+
+            // Someday I might look up the car
+            // online webservice to get more
+            // accurate value.
+            return carValue;
+        }
+
+
+    }
+
+    class car
+    {
+        public string Make {  get; set; }
+        public string Model { get; set; }
+        public string year { get; set; }
+        public string color { get; set; }
+
+        public decimal DetermineMarketValue()
+        {
+            decimal carValue;
+
+            if (year > 1990)
+                carValue = 10000;
+            else
+                carValue = 2000;
+
+            return carValue;
+
+                
+        }
+
+        
+
+
+    }
+}
+

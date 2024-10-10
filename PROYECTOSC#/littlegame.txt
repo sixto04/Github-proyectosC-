@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Decisions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+            Console.WriteLine("Sixto Gran Sorteo");
+            Console.Write("Escoge una puerta: 1, 2 o 3: ");
+            string userValue = Console.ReadLine();
+
+            string message = "";
+
+            if (userValue == "1")           
+                 message = "ganste un carro nuevo!";
+                Console.WriteLine(message);            
+            else if (userValue == "2")           
+                 message = "Perdiste";
+                Console.WriteLine(message);           
+            else if (userValue == "3")           
+                 message = "Perdiste";
+                Console.WriteLine(message);
+            else
+            {
+                 message = "lo sentimos no comprendimos su respuesta";
+                Console.WriteLine(message);
+            }
+
+            Console.ReadLine();
+            */
+
+            Console.WriteLine("Sixto Gran Sorteo");
+            Console.Write("Escoge una puerta: 1, 2 o 3: ");
+            string userValue = Console.ReadLine();
+
+            string message = (userValue == "1") ? "boat" : "strand of lint";
+
+            //Console.Write("You won a");
+            //Console.Write(message);
+            //Console.Write(".");
+
+            //Console.WriteLine("You won a {0}.", message);
+            Console.WriteLine("You entered: {0}, therefore you won a {1}.",userValue, message);
+
+            Console.ReadLine();
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+    }
+}
+
